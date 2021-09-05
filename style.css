@@ -10,6 +10,18 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: white;
+  color: black;
+  width: 100%;
+}
+/* Dark Mode Switch */
+body {
+  transition: 0.2s ease-in;
+}
+.dark-mode {
+  background-color: rgb(53, 52, 52);
+  color: white;
+  transition: 0.4s ease-out;
 }
 
 /* Toggle button  */
@@ -57,7 +69,7 @@ input:checked:before {
 
 .header {
   display: grid;
-  grid-template-columns: 1/2fr 4fr 5fr;
+  grid-template-columns: 2fr 4fr 5fr;
   justify-content: space-between;
   align-items: center;
   width: 80%;
@@ -89,9 +101,9 @@ input:checked:before {
   display: grid;
   /* grid-template-rows: repeat(2, 1fr); */
   grid-template-columns: repeat(3, 1fr);
-  height: 80vh;
-  width: 100%;
-  gap: 5rem;
+  height: 91vh;
+  width: 60%;
+  /* gap: 1rem; */
 }
 
 .col {
@@ -127,7 +139,7 @@ section {
 
 section p {
   top: 8px;
-  left: 179px;
+  left: 228px;
   position: absolute;
   text-transform: uppercase;
   font-size: 6.5px;
@@ -136,27 +148,28 @@ section p {
 }
 
 section img {
-  width: 11rem;
+  width: 14rem;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
   border-radius: 5px;
   margin-right: 0.2rem;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1400px) {
   .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    width: 60%;
     gap: 1rem;
   }
 
   section p {
     top: 8px;
-    left: 259px;
+    left: 228px;
   }
 
   section img {
-    width: 16rem;
+    width: 14rem;
   }
 
   input {
@@ -164,30 +177,21 @@ section img {
   }
 
   .header {
-  grid-template-columns: 1/1fr 4fr 5fr;
-
-}
-
-@media screen and (max-width: 750px) {
-  .container {
-    display: grid;
     grid-template-columns: 1fr;
+    text-align: center;
   }
-  section p {
-    top: 8px;
-    left: 196px;
-    position: absolute;
-    text-transform: uppercase;
-    font-size: 6.5px;
-    font-weight: 500;
-    letter-spacing: 1.4px;
-  }
+  @media screen and (max-width: 800px) {
+    .container {
+      grid-template-columns: 3fr;
+      width: 90%;
+    }
+    section p {
+      top: 8px;
+      left: 196px;
+    }
 
-  section img {
-    width: 12rem;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-      rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    border-radius: 5px;
-    margin-right: 0.2rem;
+    section img {
+      width: 12rem;
+    }
   }
 }
